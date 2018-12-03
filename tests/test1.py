@@ -43,3 +43,15 @@ def test_2_1():
     ]
     assert ("fghij", "fguij") == find_similarish(source)
     pass
+
+
+def test3_1():
+    source = [
+        "# 1 @ 1,3: 4x4",
+        "# 2 @ 3,1: 4x4",
+        "# 3 @ 5,5: 2x2",
+    ]
+    from solutions.q3_1 import Claims
+    field = Claims(source)
+    assert field.Count_Intesections() == 4
+    pass
